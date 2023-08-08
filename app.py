@@ -15,6 +15,8 @@ def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = Fal
     yellow_light = light_off
     green_light = light_off
 
+    # Not convoluting this logic with checking if one light is on at a single time. The user doesn't have a way to input
+    # get_traffic_light
     if red:
         red_light = f'\033[31m{light_on}\033[0m'
 

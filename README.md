@@ -25,17 +25,21 @@
 * Run the python code using command line or run it on your IDE
 
 * app.py program gets the input sequentially and prints out results sequentially including multiple runs and inputs
+    - You can exit this program by typing exit while providing input or Keyboard interrupt (Ctrl+C)
     - ```commandline
       python app.py
       ```
 * chatgpt.py program gets the input sequentially and uses a thread for continuous traffic light simulation
+    - You can exit this program by pressing enter or Keyboard interrupt (Ctrl+C)
     - ```commandline
-      python app.py
+      python chat_gpt.py
       ```
-* chatgpt_combined.py program is customized to receive the input sequentially and uses a thread for continuous traffic light simulation with CLI art
+* chatgpt_combined.py program is customized to receive valid input sequentially and uses a thread for continuous traffic light simulation with CLI art
+    - You can exit this program by pressing enter or Keyboard interrupt (Ctrl+C)
     - ```commandline
-      python app.py
+      python chatgpt_combined.py
       ```
+
     
 ## Requirements
 
@@ -46,7 +50,7 @@
 - [x] You must print ‘Exiting Traffic Light Simulator’ to the screen when the user instructs the program to exit
 - [x] Different message if the simulator must shut itself down.
 - [x] You must complete this challenge in Python. 
-- [x] You must provide a README file to explain how to build/install and operate your software. Your submission must be your own work.
+- [x] (No setup.py or pyinstaller required) You must provide a README file to explain how to build/install and operate your software. Your submission must be your own work. 
 - [x] Draws and operates a traditional traffic light.
 - [x] You may not send it to us as an email attachment. 
 - [ ] Add your assumptions

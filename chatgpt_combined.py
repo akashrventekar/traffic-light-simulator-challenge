@@ -1,7 +1,8 @@
-
-import time
 import threading
+
+# could have put these in a helpers folder. But kept these in app.py for simplicity
 from app import get_valid_input, print_traffic_lights
+
 
 class TrafficLightSimulator:
     def __init__(self):
@@ -30,13 +31,14 @@ class TrafficLightSimulator:
         self.running = False
         self.thread.join()
 
+
 if __name__ == "__main__":
     print("Welcome to the Traffic Light Simulator!")
     simulator = TrafficLightSimulator()
 
     try:
         simulator.start()
-        input_command = input("Enter anything to stop the simulation...")
+        input_command = input("Press Enter to stop the simulation...")
         simulator.stop()
         print("Exiting Traffic Light Simulator")
     except KeyboardInterrupt:
