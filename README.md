@@ -15,8 +15,7 @@ pip3 install -U -r requirements.txt
 - [x] As your software will be used to operate critical infrastructure a user must not be able to crash the software
 - [x] You must print ‘Exiting Traffic Light Simulator’ to the screen when the user instructs the program to exit and a different message if the simulator must shut itself down.
 - [x] You must complete this challenge in Python. 
-- [ ]You must provide a README file to explain how to build/install and
-operate your software. Your submission must be your own work.
+- [ ]You must provide a README file to explain how to build/install and operate your software. Your submission must be your own work.
 - [x] Draws and operates a traditional traffic light.
 - [x] You may not send it to us as an email attachment. 
 

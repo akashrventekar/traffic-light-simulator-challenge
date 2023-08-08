@@ -30,7 +30,7 @@ def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = Fal
   [______]
 .----''----.
 |   .==.   |
-|{red_light}|
+{red_light}
 |   .==.   |
 |   .==.   |
 {yellow_light}
