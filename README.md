@@ -1,6 +1,12 @@
 # traffic-light-simulator-challenge
 :vertical_traffic_light: Program that draws and operates a traditional traffic light :traffic_light:
 
+###  Installation and running the application
+```
+pip3 install -U -r requirements.txt
+```
+
+
 ## Requirements
 
 - [ ] The program should take input from a user about how long each light color should stay lit before transitioning
