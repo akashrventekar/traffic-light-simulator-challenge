@@ -15,7 +15,7 @@ def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = Fal
     yellow_light = light_off
     green_light = light_off
 
-    # Not convoluting this logic with checking if one light is on at a single time. The user doesn't have a way to input
+    # Not convoluting this logic with checking if one light is on at a single time. The user doesn't have a way to invoke
     # get_traffic_light
     if red:
         red_light = f'\033[31m{light_on}\033[0m'
@@ -44,7 +44,7 @@ def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = Fal
     """
 
 
-# Verified that printing can be sequential without clearing should be fine
+# Verified that printing can be sequential without clearing the console should be fine
 def print_traffic_lights(red_duration: str, yellow_duration: str, green_duration: str):
     print(get_traffic_light(red=True, yellow=False, green=False))
     time.sleep(red_duration)
@@ -70,7 +70,7 @@ def valid_input(user_input: str) -> bool:
         return False
     return True
 
-
+# Assumption: User can type exit is a valid input
 def get_valid_input(color: str) -> int:
     user_input = input(
         f'Enter the duration (in seconds) for {color} light color to stay lit before transitioning or type exit to exit the program: ')
@@ -93,7 +93,8 @@ including multiple runs and inputs <-- Using this approach
 * Could have created a class'''
 if __name__ == "__main__":
     try:
-        # Assumption take inputs each round
+        # Assumption take inputs for each light and then simulate once and get the inputs again
+        # You can remove this while loop to run one cycle of the lights and then shut itself down afterwards
         while True:
             user_input_red_duration = get_valid_input(color="red")
             user_input_yellow_duration = get_valid_input(color="yellow")

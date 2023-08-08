@@ -53,13 +53,15 @@
 - [x] (No setup.py or pyinstaller required) You must provide a README file to explain how to build/install and operate your software. Your submission must be your own work. 
 - [x] Draws and operates a traditional traffic light.
 - [x] You may not send it to us as an email attachment. 
-- [ ] Add your assumptions
+- [x] Add your assumptions
 
 ## Evaluation Criteria
 
 - [x] You followed instructions
 - [x] Software functions as requested and meets all stated requirements
-- [x] Software is designed for easy extensibility. Should you proceed to a later round interview, you will be asked how your software could be modified to accommodate new use cases and traffic light designs. You will not be provided with descriptions of these variants at this time.
+- [x] (Did not want to pre-maturely optimize the solution with lists) Software is designed for easy extensibility. 
+Should you proceed to a later round interview, you will be asked how your software could be modified to accommodate new use cases and traffic light designs. 
+You will not be provided with descriptions of these variants at this time.
 - [x] Software is designed and implemented for automated testability. It is a benefit if this is demonstrated.
 - [x] Software is designed and implemented to support packaging and delivery.
 - [x] Software conforms to widely accepted coding style guidelines.
