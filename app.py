@@ -42,13 +42,16 @@ def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = Fal
     """
 
 
+# Verified that printing can be sequential without clearing should be fine
 def print_traffic_lights(red_duration: str, yellow_duration: str, green_duration: str):
-    time.sleep(red_duration)
     print(get_traffic_light(red=True, yellow=False, green=False))
-    time.sleep(yellow_duration)
+    time.sleep(red_duration)
+
     print(get_traffic_light(red=False, yellow=True, green=False))
-    time.sleep(green_duration)
+    time.sleep(yellow_duration)
+
     print(get_traffic_light(red=False, yellow=False, green=True))
+    time.sleep(green_duration)
 
 
 def valid_input(user_input: str) -> bool:
@@ -68,27 +71,34 @@ def valid_input(user_input: str) -> bool:
 
 def get_valid_input(color: str) -> int:
     user_input = input(
-        f'Enter the duration (in seconds) for {color} light color to stay lit before transitioning or enter exit to exit the program: ')
+        f'Enter the duration (in seconds) for {color} light color to stay lit before transitioning or type exit to exit the program: ')
     while not valid_input(user_input):
         print(f'{color} duration: {user_input} is invalid')
         user_input = input(
-            f'Enter the duration (in seconds) for {color} light color to stay lit before transitioning or enter exit to exit the program: ')
+            f'Enter the duration (in seconds) for {color} light color to stay lit before transitioning or type exit to exit the program: ')
     return int(user_input)
 
 
+'''Several ways to implement: 
+* Using Threads to run the program 
+* I could write two different programs 
+- One to take input and save it as a file (config for the second program) [This can use input or use sysargs/argparse]. 
+Can't have two programs write at the same time, that will lead to corruption (need to lock it) 
+- The second program reads from the file and executes the traffic lights accordingly 
+* Easier for this program to just get the inputs sequentially and print out results sequentially 
+including multiple runs and inputs <-- Using this approach
+* We can also do a single run of this program and stop
+* Could have created a class'''
 if __name__ == "__main__":
-    '''
-    Several ways to do it:
-    * Using Threads to run the program
-    * I could write two different programs
-     - One to take input and save it as a file (config for the second program) [This can use input or use sysargs/argparse]. Can't have two programs write at the same time, that will lead to corruption (need to lock it)
-     - The second program reads from the file and executes the traffic lights accordingly 
-    * Easier for this program to just get the inputs sequentially and print out results sequentially (Using this approach)
-    * You can always create a class, but refraining from doing that
-   '''
-    while True:
-        user_input_red_duration = get_valid_input(color="red")
-        user_input_yellow_duration = get_valid_input(color="yellow")
-        user_input_green_duration = get_valid_input(color="green")
-        print_traffic_lights(red_duration=user_input_red_duration, yellow_duration=user_input_yellow_duration,
-                             green_duration=user_input_green_duration)
+    try:
+        # Assumption take inputs each round
+        while True:
+            user_input_red_duration = get_valid_input(color="red")
+            user_input_yellow_duration = get_valid_input(color="yellow")
+            user_input_green_duration = get_valid_input(color="green")
+
+            print_traffic_lights(red_duration=user_input_red_duration, yellow_duration=user_input_yellow_duration,
+                                 green_duration=user_input_green_duration)
+            print('Finished a round of traffic simulation')
+    except KeyboardInterrupt:
+        print("Stopped Traffic Light Simulator due to interruption.")

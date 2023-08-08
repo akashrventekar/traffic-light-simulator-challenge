@@ -1,8 +1,7 @@
-# This is the chatgpt solution. Very Elegant ;) Just need to add exception handling to make this perfect
 
 import time
 import threading
-
+from app import get_valid_input, print_traffic_lights
 
 class TrafficLightSimulator:
     def __init__(self):
@@ -12,18 +11,14 @@ class TrafficLightSimulator:
         self.running = False
 
     def set_light_durations(self):
-        self.green_duration = int(input("Enter green light duration (seconds): "))
-        self.yellow_duration = int(input("Enter yellow light duration (seconds): "))
-        self.red_duration = int(input("Enter red light duration (seconds): "))
+        self.red_duration = get_valid_input(color="red")
+        self.yellow_duration = get_valid_input(color="yellow")
+        self.green_duration = get_valid_input(color="green")
 
     def traffic_light(self):
         while self.running:
-            print("\033[32mGREEN\033[0m")
-            time.sleep(self.green_duration)
-            print("\033[33mYELLOW\033[0m")
-            time.sleep(self.yellow_duration)
-            print("\033[31mRED\033[0m")
-            time.sleep(self.red_duration)
+            print_traffic_lights(red_duration=self.red_duration, yellow_duration=self.yellow_duration,
+                                 green_duration=self.green_duration)
 
     def start(self):
         self.set_light_durations()
@@ -35,16 +30,15 @@ class TrafficLightSimulator:
         self.running = False
         self.thread.join()
 
-
 if __name__ == "__main__":
     print("Welcome to the Traffic Light Simulator!")
     simulator = TrafficLightSimulator()
 
     try:
         simulator.start()
-        input("Press Enter to stop the simulation...")
+        input_command = input("Enter anything to stop the simulation...")
         simulator.stop()
         print("Exiting Traffic Light Simulator")
     except KeyboardInterrupt:
         simulator.stop()
-        print("Traffic Light Simulator shutdown due to interruption.")
+        print("Stopped Traffic Light Simulator due to interruption")
