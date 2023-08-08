@@ -29,17 +29,17 @@ Run the python code using command line or run it on your IDE
 * app.py program gets the input sequentially and prints out results sequentially including multiple inputs and runs
     - You can exit this program by typing exit while providing input or Keyboard interrupt (Ctrl+C)
     - ```commandline
-      python app.py
+      python3 app.py
       ```
 * chatgpt.py program gets the input sequentially and uses a thread for continuous traffic light simulation
     - You can exit this program by pressing enter or Keyboard interrupt (Ctrl+C)
     - ```commandline
-      python chat_gpt.py
+      python3 chat_gpt.py
       ```
 * chatgpt_combined.py program is customized to receive valid input sequentially and uses a thread for continuous traffic light simulation with CLI art
     - You can exit this program by pressing enter or Keyboard interrupt (Ctrl+C)
     - ```commandline
-      python chatgpt_combined.py
+      python3 chatgpt_combined.py
       ```
 
     
