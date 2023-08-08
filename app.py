@@ -8,8 +8,8 @@ logging.disable(logging.CRITICAL)  # You can either enable or disable this
 def get_traffic_light(red: bool = False, yellow: bool = False, green: bool = False) -> str:
     light_on = "|  /####\  |\n" \
                "|  \####/  |"
-    light_off = "|    /\    |\n" \
-                "|    \/    |"
+    light_off = "|  /    \  |\n" \
+                "|  \    /  |"
 
     red_light = light_off
     yellow_light = light_off
