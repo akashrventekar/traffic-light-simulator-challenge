@@ -1,7 +1,7 @@
 # traffic-light-simulator-challenge
 :vertical_traffic_light: Program that draws and operates a traditional traffic light :traffic_light:
 
-###  Installation and running the application
+###  Pre-requisites & Installation
 
 * Pre-requisites: The code is written in python. To run this code, you need to have Python 3 installed on your computer
 * Clone the repo
@@ -22,9 +22,11 @@
   - ```
     pip3 install -U -r requirements.txt
     ```
-* Run the python code using command line or run it on your IDE
 
-* app.py program gets the input sequentially and prints out results sequentially including multiple runs and inputs
+#### Running the application
+Run the python code using command line or run it on your IDE
+
+* app.py program gets the input sequentially and prints out results sequentially including multiple inputs and runs
     - You can exit this program by typing exit while providing input or Keyboard interrupt (Ctrl+C)
     - ```commandline
       python app.py
