@@ -4,12 +4,12 @@
 ###  Pre-requisites
 
 * Pre-requisites: The code is written in python. To run this code, you need to have Python 3 installed on your computer
-* Clone the repo
+* Clone the repo & change the directory to traffic-light-simulator-challenge
     - ```
       git clone git@github.com:akashrventekar/traffic-light-simulator-challenge.git
       ```
 
-#### Running the application
+### Running the application
 Run the python code using command line or run it on your IDE
 
 * app.py program gets the input sequentially and prints out results sequentially including multiple inputs and runs
