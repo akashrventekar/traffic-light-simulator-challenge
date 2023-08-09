@@ -6,7 +6,7 @@
 * Pre-requisites: The code is written in python. To run this code, you need to have Python 3 installed on your computer
 * Clone the repo
     - ```
-      git@github.com:akashrventekar/traffic-light-simulator-challenge.git
+      git clone git@github.com:akashrventekar/traffic-light-simulator-challenge.git
       ```
 * Install the virtual environment and requirements
 
