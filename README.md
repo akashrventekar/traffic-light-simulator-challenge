@@ -1,27 +1,13 @@
 # traffic-light-simulator-challenge
 :vertical_traffic_light: Program that draws and operates a traditional traffic light :traffic_light:
 
-###  Pre-requisites & Installation
+###  Pre-requisites
 
 * Pre-requisites: The code is written in python. To run this code, you need to have Python 3 installed on your computer
 * Clone the repo
     - ```
       git clone git@github.com:akashrventekar/traffic-light-simulator-challenge.git
       ```
-* Install the virtual environment and requirements
-
-    - Run the following command:
-      - ```commandline
-        python3 -m venv venv
-        ```
-    - Activate the virtual environment:
-        - ```commandline
-          source venv/bin/activate
-          ```
-* Install required python packages. These requirements are required only when you want to run tests written with pytest
-  - ```
-    pip3 install -U -r requirements.txt
-    ```
 
 #### Running the application
 Run the python code using command line or run it on your IDE
@@ -42,6 +28,21 @@ Run the python code using command line or run it on your IDE
       python3 chatgpt_combined.py
       ```
 
+### Setup & Installation
+* Install the virtual environment and requirements for working with the code
+
+    - Run the following command:
+      - ```commandline
+        python3 -m venv venv
+        ```
+    - Activate the virtual environment:
+        - ```commandline
+          source venv/bin/activate
+          ```
+* Install required python packages. These requirements are required only when you want to run tests written with pytest
+  - ```
+    pip3 install -U -r requirements.txt
+    ```
     
 ## Requirements
 
